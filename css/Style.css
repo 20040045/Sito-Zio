@@ -1,0 +1,202 @@
+/* Stile Generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+    width: 100%; /* Copre tutta la larghezza */
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5%;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+    border-radius: 0.5rem;
+}
+
+/* Menu a tendina */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    list-style: none;
+    min-width: 200px;
+}
+
+.dropdown-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+.dropdown-menu a:hover {
+    color: #007BFF;
+}
+
+.dropdown-menu.show {
+    display: block; /* Mostra il menu */
+}
+
+
+/* Contenuto principale */
+.content {
+    max-width: 90%;
+    margin: 5% auto;
+}
+
+.text-image-container {
+    display: grid; /* Griglia per allineare testo e immagine */
+    grid-template-columns: 1fr 1fr; /* Due colonne uguali */
+    gap: 2rem; /* Spaziatura tra testo e immagine */
+    align-items: center; /* Allinea verticalmente al centro */
+}
+
+.text {
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+.text h1 {
+    font-size: 2.5rem; /* Titolo proporzionato */
+    margin-bottom: 1rem;
+}
+
+.text p {
+    font-size: 1.2rem; /* Dimensione del paragrafo */
+    line-height: 1.6; /* Spaziatura tra le righe */
+}
+
+.image img {
+    width: 100%; /* Occupa lo spazio disponibile nella colonna */
+    max-width: 100%; /* Evita che l'immagine esca dalla griglia */
+    border-radius: 1rem; /* Angoli arrotondati per estetica */
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .text-image-container {
+        grid-template-columns: 1fr; /* Passa a una colonna su schermi piccoli */
+        text-align: center; /* Centra testo e immagine */
+    }
+
+    .image img {
+        max-width: 70%; /* Ridimensiona l'immagine per schermi piccoli */
+        margin: 0 auto; /* Centra l'immagine */
+    }
+}
+
+
+/* Footer */
+.footer {
+    background-color: #222; /* Colore scuro per la footbar */
+    color: #fff; /* Testo bianco */
+    padding: 2rem 5%; /* Spaziatura interna */
+}
+
+.footer-content {
+    display: grid; /* Griglia per allineare le sezioni */
+    grid-template-columns: repeat(4, 1fr); /* Quattro colonne uguali */
+    gap: 2rem; /* Spaziatura tra le colonne */
+    max-width: 90%; /* Larghezza massima per evitare bordi troppo stretti */
+    margin: 0 auto; /* Centra la griglia */
+    text-align: center; /* Testo centrato */
+}
+
+.footer-section h4 {
+    font-size: 1.2rem; /* Titoli in maiuscolo */
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.footer-logo {
+    max-width: 6rem; /* Dimensione del logo */
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Spaziatura tra le icone */
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem; /* Dimensione delle icone */
+    color: white;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a:hover {
+    background-color: #555; /* Colore al passaggio del mouse */
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* Una colonna su schermi piccoli */
+        gap: 1.5rem;
+    }
+}
+
+
+
